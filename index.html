@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benson Wanima | Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ffffff; 
+            --accent: #3498db;
+            --overlay: rgba(0, 0, 0, 0.6); /* This darkens the photo so text is readable */
+            --light: #f9f9f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* --- Full Screen Hero Background --- */
+        .hero {
+            height: 100vh;
+            width: 100%;
+            background: var(--overlay) url('profile.jpg'); /* Your Image Here */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax effect for your 3190 screen */
+            background-blend-mode: overlay;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 10%;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo { font-weight: 700; color: white; letter-spacing: 1px; }
+
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: white; font-size: 0.8rem; text-transform: uppercase; }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text p { font-size: 1.2rem; max-width: 600px; margin: 0 auto; opacity: 0.9; }
+
+        /* --- Section Styling --- */
+        section { padding: 5rem 10%; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; text-align: center; margin-bottom: 3rem; }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .grid-card {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid #2c3e50;
+        }
+
+        /* --- Contact Form --- */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--light);
+            padding: 3rem;
+            border-radius: 15px;
+        }
+
+        input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 5px; }
+        button { background: #2c3e50; color: white; padding: 1rem; border: none; border-radius: 5px; width: 100%; font-weight: bold; cursor: pointer; }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">BENSON WANIMO</div>
+        <ul class="nav-links">
+            <li><a href="#history">History</a></li>
+            <li><a href="#occupation">Occupation</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#strengths">Strengths</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Benson Wanimo</h1>
+            <p>Educator | Writer | Web Developer</p>
+            <p style="margin-top: 20px; font-style: italic;">"Crafting the future of education and the narratives of history."</p>
+        </div>
+    </header>
+
+    <section id="history">
+        <h2>History</h2>
+        <div class="grid-container">
+            <div class="grid-card">
+                <h3>Academic Background</h3>
+                <p>Bachelor in Education Science from Kaimosi University. Currently based in Bungoma, Kenya.</p>
+            </div>
+            <div class="grid-card">
+                <h3>Research Focus</h3>
+                <p>Deep interest in 20th-century historical events, including the industrial nature of the Holocaust and the Great Leap Forward.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" style="background: #f4f4f4;">
+        <h2>Professional Skills</h2>
+        <div class="grid-container">
+            <div class="grid-card"><h3>Teaching</h3><p>Secondary school educator with over a year of experience in Biology lesson planning.</p></div>
+            <div class="grid-card"><h3>Development</h3><p>Web Development (HTML/CSS), GitHub hosting, and currently learning Python.</p></div>
+            <div class="grid-card"><h3>Writing</h3><p>Novelist and researcher currently working on <i>The Weight of Zero</i>.</p></div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Send a Message</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea rows="4" placeholder="Your Message"></textarea>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </section>
+
+    <footer style="text-align: center; padding: 3rem; background: #2c3e50; color: white;">
+        <p>&copy; 2026 Benson Wanimo. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
